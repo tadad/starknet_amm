@@ -1,0 +1,166 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "id",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "a_balance",
+                "offset": 1,
+                "type": "Uint256"
+            },
+            {
+                "name": "b_balance",
+                "offset": 3,
+                "type": "Uint256"
+            }
+        ],
+        "name": "Position",
+        "size": 5,
+        "type": "struct"
+    },
+    {
+        "inputs": [],
+        "name": "get_token_a",
+        "outputs": [
+            {
+                "name": "token_a",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_token_b",
+        "outputs": [
+            {
+                "name": "token_b",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_reserve_a",
+        "outputs": [
+            {
+                "name": "reserve_a",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_reserve_b",
+        "outputs": [
+            {
+                "name": "reserve_b",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "user",
+                "type": "felt"
+            }
+        ],
+        "name": "get_position",
+        "outputs": [
+            {
+                "name": "position",
+                "type": "Position"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "a",
+                "type": "felt"
+            },
+            {
+                "name": "b",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "a_amount",
+                "type": "Uint256"
+            },
+            {
+                "name": "b_amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "deposit",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "a_amount",
+                "type": "Uint256"
+            },
+            {
+                "name": "b_amount",
+                "type": "Uint256"
+            }
+        ],
+        "name": "withdraw",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "amount_out",
+                "type": "Uint256"
+            },
+            {
+                "name": "a_in",
+                "type": "felt"
+            }
+        ],
+        "name": "swap",
+        "outputs": [],
+        "type": "function"
+    }
+]
